@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS';
+}
+
+.cabecera {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #f00;
+}
+
+.cabecera::after {
+    content: '';
+    width: 100%;
+    height: 10vh;
+    background-color: #f00;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(40vh - 5%);
+}
+
+.cabecera h1 {
+    margin-bottom: 30px;
+    font-size: 6vw;
+}
+
+.entradas {
+    display: flex;
+    border-radius: 10px;
+}
+
+.entradas input:first-child {
+    width: 25vw;
+    height: 3em;
+    padding-left: 15px;
+    font-size: 1em;
+    border: none;
+    outline: none;
+}
+
+.entradas input:last-child {
+    width: 80px;
+    height: 48px;
+    border: none;
+    outline: none;
+    background-color: #f00;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.entradas input:last-child:hover {
+    cursor: pointer;
+    background-color: #a00;
+}
+
+#tareas{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.4em;
+}
+
+#tareas li {
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1165px) {
+
+    .cabecera {
+        height: 42vh;
+    }
+
+    .cabecera::after {
+        top: 37vh;
+    }
+
+    .entradas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .entradas input:first-child {
+        width: 300px;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (max-width: 340px) {
+
+    .entradas input:first-child {
+        width: 250px;
+        margin-bottom: 10px;
+        font-size: .8em;
+    }
+
+}
